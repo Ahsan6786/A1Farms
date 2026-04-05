@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Chicken Shop | Fresh Poultry in Hajipur</title>
+    <meta name="description" content="A1 Chicken Shop - The premier outlet for fresh, high-quality poultry in Hajipur, Bihar. Direct farm-to-table freshness from A1 Farms.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #E31837;
+            --text-color: #333333;
+            --bg-alt: #F8F9FA;
+        }
+        body { overflow-x: hidden; width: 100%; }
+        .back-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+        }
+        .btn-back {
+            background: white;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid var(--primary-color);
+            transition: 0.3s;
+        }
+        .btn-back:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        .shop-hero {
+            height: clamp(400px, 60vh, 700px);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('s1.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 0;
+            width: 100%;
+        }
+        .shop-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1rem;
+        }
+        .shop-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .shop-showcase {
+            padding: 5rem 0;
+            background: var(--bg-alt);
+        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .showcase-img {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .showcase-img img {
+            width: 100%;
+            display: block;
+        }
+        .showcase-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        .showcase-content p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .feature-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid #EEE;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+        }
+        .feature-item i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        .shop-contact {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .contact-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 24px;
+            border: 1px solid #EEE;
+            transition: var(--transition);
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+        .contact-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .btn-back-container {
+            margin-top: 4rem;
+        }
+        @media (max-width: 992px) {
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-nav">
+        <a href="index.html" class="btn-back">
+            ← <span data-i18n="shop_btn_back">Back to Farm</span>
+        </a>
+    </div>
+
+    <!-- Language Selection Popup (Shared with Index) -->
+    <div id="language-modal" class="modal">
+        <div class="modal-content reveal">
+            <h2>Select Language / भाषा चुनें</h2>
+            <div class="modal-btns">
+                <button class="btn btn-primary lang-select" data-lang="en">English</button>
+                <button class="btn btn-primary lang-select" data-lang="hi">हिन्दी</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="header" class="scrolled">
+        <nav class="container">
+            <div class="logo">A1 <span>FARMS</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html#hero" data-i18n="nav_home">Home</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+                <li><a href="index.html#features" data-i18n="nav_quality">Quality</a></li>
+                <li><a href="index.html#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                <li><a href="index.html#location" data-i18n="nav_location">Location</a></li>
+            </ul>
+            <div class="header-actions">
+                <button class="lang-toggle btn-mini">हिन्दी</button>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Shop Hero -->
+        <section class="shop-hero">
+            <div class="container hero-content">
+                <h1 data-i18n="shop_h1">A1 Chicken Shop</h1>
+                <p data-i18n="shop_p">The finest, freshest poultry in Hajipur, direct from A1 Farms.</p>
+            </div>
+        </section>
+
+        <!-- Shop Showcase -->
+        <section class="shop-showcase">
+            <div class="container showcase-grid">
+                <div class="showcase-img reveal" style="width: 100%; max-width: 100%;">
+                    <img src="s1.png" alt="A1 Chicken Shop Interior" style="width: 100%; height: auto;">
+                </div>
+                <div class="showcase-content reveal delay-1">
+                    <h2 data-i18n="shop_about_h2">Fresh Daily, Farm Direct</h2>
+                    <p data-i18n="shop_about_p">A1 Chicken Shop is our flagship outlet in Hajipur, providing high-quality poultry at the most competitive rates. We ensure that our customers get the freshest stock every single day.</p>
+                    
+                    <h3 style="margin-bottom: 1.5rem;" data-i18n="shop_features_h3">Why Choose Us?</h3>
+                    <div class="features-grid">
+                        <div class="feature-item" style="padding: 1rem;"><span data-i18n="shop_feat_1">Cheapest Prices in Hajipur</span></div>
+                        <div class="feature-item" style="padding: 1rem;"><span data-i18n="shop_feat_2">Direct Farm-to-Table Freshness</span></div>
+                        <div class="feature-item" style="padding: 1rem;"><span data-i18n="shop_feat_3">Hygienic and Clean Processing</span></div>
+                        <div class="feature-item" style="padding: 1rem;"><span data-i18n="shop_feat_4">Home Delivery Across Hajipur</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reach Out -->
+        <section class="shop-contact container">
+            <h2 data-i18n="shop_contact_h3">Contact & Location</h2>
+            <div class="contact-cards">
+                <div class="contact-card reveal">
+                    <h4>WhatsApp</h4>
+                    <p>Order via message</p>
+                    <a href="https://wa.me/918207863707" target="_blank" class="btn btn-whatsapp" style="margin-top: 1.5rem;">Chat Now</a>
+                </div>
+                <div class="contact-card reveal delay-1">
+                    <h4 data-i18n="btn_call">Call Now</h4>
+                    <p data-i18n="shop_manager">Mr Tarique Khan (Manager)</p>
+                    <a href="tel:+918207863707" class="btn btn-primary" style="margin-top: 1.5rem;">+91 82078 63707</a>
+                </div>
+                <div class="contact-card reveal delay-2">
+                    <h4>Maps</h4>
+                    <p>Visit us in Hajipur</p>
+                    <a href="https://share.google/64D7UoD9LAkwR8HpV" target="_blank" class="btn btn-gold" style="margin-top: 1.5rem;">Open Maps</a>
+                </div>
+            </div>
+
+            <div class="btn-back-container reveal">
+                <a href="index.html" class="btn btn-outline" style="color: var(--text-color); border-color: var(--text-color);" data-i18n="shop_btn_back">Return to Farm</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">A1 <span>FARMS</span></div>
+                    <p data-i18n="footer_p">Raising the standard of poultry in Bihar through scale, quality, and commitment.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_links_h4">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#about" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="index.html#features" data-i18n="nav_quality">Our Quality</a></li>
+                        <li><a href="index.html#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                        <li><a href="index.html#location" data-i18n="nav_location">Maps</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 A1 Farms. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="main.js"></script>
+</body>
+</html>

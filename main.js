@@ -50,7 +50,20 @@ const translations = {
         contact_outlet_p: "A1 Chicken Shop, Hajipur",
         footer_p: "Raising the standard of poultry in Bihar through scale, quality, and commitment.",
         footer_links_h4: "Quick Links",
-        footer_copyright: "&copy; 2026 A1 Farms. All rights reserved."
+        footer_copyright: "&copy; 2026 A1 Farms. All rights reserved.",
+        hero_btn_shop: "Visit Chicken Shop",
+        shop_h1: "A1 Chicken Shop",
+        shop_p: "The finest, freshest poultry in Hajipur, direct from A1 Farms.",
+        shop_about_h2: "Fresh Daily, Farm Direct",
+        shop_about_p: "A1 Chicken Shop is our flagship outlet in Hajipur, providing high-quality poultry at the most competitive rates. We ensure that our customers get the freshest stock every single day.",
+        shop_features_h3: "Why Choose Us?",
+        shop_feat_1: "Cheapest Prices in Hajipur",
+        shop_feat_2: "Direct Farm-to-Table Freshness",
+        shop_feat_3: "Hygienic and Clean Processing",
+        shop_feat_4: "Home Delivery Across Hajipur",
+        shop_contact_h3: "Contact & Location",
+        shop_btn_back: "Return to Farm",
+        shop_manager: "Mr Tarique Khan (Manager)"
     },
     hi: {
         nav_home: "मुख्य पृष्ठ",
@@ -103,7 +116,20 @@ const translations = {
         contact_outlet_p: "A1 चिकन शॉप, हाजीपुर",
         footer_p: "गुणवत्ता और प्रतिबद्धता के साथ बिहार में पोल्ट्री उद्योग के नए मानक स्थापित करना।",
         footer_links_h4: "त्वरित लिंक",
-        footer_copyright: "&copy; 2026 A1 फार्म्स। सर्वाधिकार सुरक्षित।"
+        footer_copyright: "&copy; 2026 A1 फार्म्स। सर्वाधिकार सुरक्षित।",
+        hero_btn_shop: "चिकन शॉप देखें",
+        shop_h1: "A1 चिकन शॉप",
+        shop_p: "हाजीपुर में सबसे ताज़ा और शुद्ध चिकन, सीधे A1 फार्म्स से।",
+        shop_about_h2: "प्रतिदिन ताज़ा, सीधे फार्म से",
+        shop_about_p: "A1 चिकन शॉप हाजीपुर में हमारा मुख्य आउटलेट है, जो सबसे किफायती दरों पर उच्च गुणवत्ता वाली पोल्ट्री प्रदान करता है। हम सुनिश्चित करते हैं कि हमारे ग्राहकों को हर दिन सबसे ताज़ा स्टॉक मिले।",
+        shop_features_h3: "हमें क्यों चुनें?",
+        shop_feat_1: "हाजीपुर में सबसे कम कीमत",
+        shop_feat_2: "फार्म से सीधे आपकी रसोई तक ताज़गी",
+        shop_feat_3: "स्वच्छ और सुरक्षित प्रोसेसिंग",
+        shop_feat_4: "पूरे हाजीपुर में होम डिलीवरी",
+        shop_contact_h3: "संपर्क और स्थान",
+        shop_btn_back: "फार्म पर वापस लौटें",
+        shop_manager: "श्री तारिक खान (मैनेजर)"
     }
 };
 
