@@ -737,7 +737,6 @@ footer {
     }
     
     .hero {
-        background: url('mob.png') center/cover no-repeat;
         background-attachment: scroll;
     }
 
