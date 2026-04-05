@@ -736,6 +736,10 @@ footer {
         display: flex;
     }
     
+    .hero {
+        background-attachment: scroll;
+    }
+
     .hero h1 {
         font-size: 3rem;
     }
